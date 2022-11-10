@@ -19,6 +19,10 @@ public class GreetingService {
     public Optional<Greeting> findGreeting(int id) {
         return greetingRepository.findById(id);
     }
-    
 
+    public List<Greeting> allGreeting() {
+        return greetingRepository.findAll();
+    }
+
+   
 }
