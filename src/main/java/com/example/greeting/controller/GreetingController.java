@@ -28,5 +28,11 @@ public class GreetingController {
         return greetingService.allGreeting();
     }
 
-    
+    @PutMapping(value = "/update/{id}")
+    public Greeting editMesseges(@PathVariable int id,@RequestParam(value = "messege") String messege,
+                                 @RequestParam(value = "name") String name){
+        return (greetingService.editMessages(id,messege,name));
+    }
+
+   
 }
