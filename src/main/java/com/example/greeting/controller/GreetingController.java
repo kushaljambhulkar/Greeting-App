@@ -18,4 +18,10 @@ public class GreetingController {
         return greetingService.printMessages(greeting);
     }
 
+    @GetMapping("/getMessege/{id}")
+    public Optional<Greeting> findGreeting(@PathVariable int id){
+        return greetingService.findGreeting(id);
+    }
+
+    
 }
