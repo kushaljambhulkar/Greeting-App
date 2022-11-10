@@ -24,5 +24,17 @@ public class GreetingService {
         return greetingRepository.findAll();
     }
 
-   
+    public Greeting editMessages(int id, String messages,String name) {
+        Optional<Greeting> greeting = greetingRepository.findById(id);
+        if (greeting.get().getId() == id){
+            greeting.get().setMessege(messages);
+            greeting.get().setName(name);
+            return greetingRepository.save(greeting.get());
+        }else {
+            return null;
+        }
+    }
+
+    
+
 }
