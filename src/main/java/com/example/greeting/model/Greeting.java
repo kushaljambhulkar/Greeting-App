@@ -1,21 +1,36 @@
 package com.example.greeting.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Greeting {
-    private String id;
+    @Id
+    @GeneratedValue
+    private int id;
     private String name;
     private String messege;
 
-    public Greeting(String id, String name, String messege) {
+    public Greeting(int id, String name, String messege) {
         this.id = id;
         this.name = name;
         this.messege = messege;
     }
 
-    public String getId() {
+    public Greeting(){
+
+    }
+
+    public Greeting(int incrementAndGet, String messege){
+        this.id = incrementAndGet;
+        this.messege = messege;
+    }
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
