@@ -35,6 +35,9 @@ public class GreetingService {
         }
     }
 
-    
+    public void deleteGreeting(int id) {
+        Optional<Greeting> greeting = greetingRepository.findById(id);
+        greetingRepository.delete(greeting.get());
+    }
 
 }
