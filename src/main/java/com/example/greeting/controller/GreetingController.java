@@ -23,5 +23,10 @@ public class GreetingController {
         return greetingService.findGreeting(id);
     }
 
+    @GetMapping(value = "/allGreeting")
+    public List<Greeting> allGreeting(){
+        return greetingService.allGreeting();
+    }
+
     
 }

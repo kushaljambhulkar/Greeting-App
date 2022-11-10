@@ -11,17 +11,14 @@ public class Greeting {
     private int id;
     private String name;
     private String messege;
-
     public Greeting(int id, String name, String messege) {
         this.id = id;
         this.name = name;
         this.messege = messege;
     }
-
     public Greeting(){
 
     }
-
     public Greeting(int incrementAndGet, String messege){
         this.id = incrementAndGet;
         this.messege = messege;
@@ -29,23 +26,18 @@ public class Greeting {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getMessege() {
         return messege;
     }
-
     public void setMessege(String messege) {
         this.messege = messege;
     }
